@@ -11,6 +11,14 @@ class DataGeneric<T>
         Console.WriteLine($"Data yang tersimpan adalah: {Data}");
     }
 }
+public class HaloGeneric
+{
+    public void SapaUser<T>(T userName)
+    {
+        Console.WriteLine($"Halo user {userName}");
+    }
+}
+
 class Program
 {
 
@@ -21,6 +29,12 @@ class Program
         stringData.PrintData();
         DataGeneric<string> nimData = new DataGeneric<string>("1302220004");
         nimData.PrintData();
-        Console.ReadLine();
+
+        HaloGeneric halo = new HaloGeneric();
+
+
+        string namaPanggilan = "Fauzan";
+        halo.SapaUser(namaPanggilan);
+        Console.Read();
     }
 }
